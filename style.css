@@ -1,1 +1,72 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.conteiner {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  background: #F8F8F8;
+  box-shadow: 10px 10px 20px 0px rgba(194, 192, 192, 0.25);
+  margin-bottom: 3rem;
+}
+.header__lists {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-left: 50%;
+  margin-right: 15.7%;
+  margin-bottom: 20px;
+}
+.header__lists-en {
+  color: #C4C4C4;
+}
+.header__lists-ru {
+  color: black;
+}
+.header__lists-ru:hover {
+  color: black;
+  text-decoration: underline;
+}
+.header__list {
+  display: flex;
+  list-style-type: none;
+  gap: 85px;
+  padding-left: 10%;
+}
+.header__list-inputs {
+  background: transparent;
+  padding-bottom: 5px;
+  margin: 10px;
+  border: none;
+  width: 59%;
+}
+.header__list-input {
+  background: #ECECEC;
+  width: 30%;
+  height: 15%;
+}
+.header__list-button {
+  gap: 20px;
+}
+.header__list-but {
+  background: transparent;
+  width: 86px;
+  height: 40px;
+}
+.header__list-buttons {
+  background: black;
+  color: white;
+  width: 140px;
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */
