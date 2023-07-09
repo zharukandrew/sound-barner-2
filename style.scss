@@ -7,71 +7,71 @@ body{
     font-family: 'M PLUS 1p', sans-serif;
 }
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800&display=swap');
-.conteiner{
-    width:1600px;
+
+.conteiner {
+    max-width: 1125px;
     margin: 0 auto;
+    padding: 5px;
     
 }
-.header{
-&__lists{
-    display: flex;
-    justify-content: flex-end;
-    gap:0.5rem;
-    margin-left: 50%;
-    margin-right: 15.7%;
-    margin-bottom: 20px;
-}
-&__lists-en{
-    color: #C4C4C4;
-}
-&__lists-ru{
-    color:black;
-}
-&__lists-ru:hover{
-    color:black;
-    text-decoration:underline
 
-}
-&__list{
-    display: flex;
-    list-style-type: none;
-    gap:85px;
-    padding-left: 10%;
-}
-&__list-inputs{
-    background:transparent;
-    padding-bottom: 5px;
-    margin: 10px;
-    border: none;
-    width:59%;
+.section-header {
+    width: 100%;
     
 }
-&__list-input{
-    background: #ECECEC;
-    width: 30%;
-    height: 15%;
+
+.header-content {
+   width: 100%;
+   height: 90px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #F8F8F8;
+   box-shadow: 2px 4px 6px 0px rgba(194, 192, 192, 0.25);
+
+   &__inp {
+    margin-right: 30px;
+    background:#ECECEC ;
+    max-width: 80%;
+    max-height:30%
 }
-&__list-button{
-    gap:20px;
-}
-&__list-but{
+   &__inp input{
     background: transparent;
-    width: 86px;
-    height: 40px;
-}
-&__list-buttons{
-    background: black;
-    color:white;
-    width: 140px;
-    height: 40px;
-}
-width:100%;
-background: #F8F8F8;
-box-shadow: 10px 10px 20px 0px rgba(194, 192, 192, 0.25);
-margin-bottom: 3rem;
-    
+    border: none ;
    
+   }
+   &__btn  {
+    color: black;
+    text-decoration:none;
+   }
+   &__btn:hover  {
+    color:red;
+   }
 }
 
-
-
+.cards-img {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    &__card {
+        flex: 0 0 32%;
+        margin-bottom: 10px;
+        
+        display: flex;
+        flex-direction: column;
+        &-top img {
+            width: 100%;
+        }
+    }
+}
+.footer{
+    display: flex;
+    background: black;
+    justify-content: center;
+    &__title{
+        color: #F8F8F8;
+    }
+}
