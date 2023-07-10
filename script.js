@@ -26,3 +26,7 @@ cards.innerHTML = `<p> Меня добавили через JavaScript </p>`*/
 let arr =document.querySelector('.footer__title')
 console.log(arr.innerHTML)
 arr.innerHTML =`<h3 class="footer__title">раз</h3>`
+const listElement = document.getElementById("list"); 
+// Выводит в консоль HTML-содержимое элемента списка console.log(listElement.innerHTML) 
+// Заменяет содержимое элемента списка на новое, браузер перерисует этот блок 
+listElement.innerHTML = '<p> Меня добавили через JavaScript </p>'

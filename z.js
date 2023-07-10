@@ -39,3 +39,123 @@ function fun(){
 }
 fun()
  */
+/* №4
+
+Дана некоторая строка:
+
+'abcde'
+Переведите в верхний регистр все нечетные буквы этой строки. В нашем случае должно получится следующее:
+
+'AbCdE'
+function toWeirdCase(s){
+  var str = s.toLowerCase().split(''); // Переводим строку в нижний регистр, и разбиваем на массив. 
+  var j = 0;
+  for(var i = 0; i < str.length; i++){ // проходимся циклом по этим массивам
+      if(str[i] == ' '){
+          j = 0;
+          continue;
+      }
+      else{
+          if (j % 2 == 0){
+              str[i] = str[i].toUpperCase(); // переводим элемент с четным индексом в верхний регистр
+          }
+          j++;
+      }
+  }
+  return str.join('');
+}
+
+console.log(toWeirdCase('abcde'));
+2 способ сокращенный код
+let toWeirdCase = (s) => {
+  let str = s.toLowerCase().split('');
+  let j = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == ' ') {
+      j = 0;
+      continue;
+    } else {
+      if (j % 2 == 0) {
+        str[i] = str[i].toUpperCase();
+      }
+      j++;
+    }
+  }
+  return str.join('');
+}
+
+console.log(toWeirdCase('abcde'));
+
+*/
+/*let toWeirdCase = (s) => {
+  let str = s.toLowerCase().split('');
+  let j = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== ' ') {
+      str[i] = j % 2 === 0 ? str[i].toUpperCase() : str[i];
+      j++;
+    } else {
+      j = 0;
+    }
+  }
+  return str.join('');
+}
+
+console.log(toWeirdCase('abcde'));*/
+/*№5
+
+Дана некоторая строка со словами:
+
+'aaa bbb ccc'
+Сделайте заглавным первый символ каждого слова в этой строке. В нашем случае должно получится следующее:
+
+'Aaa Bbb Ccc'
+let str = 'aaa bbb ccc';  
+ 
+function capitalize(str) {
+
+ return str.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()})
+
+}
+console.log(capitalize(str))
+*/
+/*function toWeirdCase(s){
+  var str = s.toLowerCase().split(''); // Переводим строку в нижний регистр, и разбиваем на массив. 
+  var j = 0;
+  for(var i = 0; i < str.length; i++){ // проходимся циклом по этим массивам
+      if(str[i] == ' '){
+          j = 0;
+          continue;
+      }
+      else{
+          if (j % 2 == 0){
+              str[i] = str[i].toUpperCase(); // переводим элемент с четным индексом в верхний регистр
+          }
+          j++;
+      }
+  }
+  return str.join('');
+}
+
+console.log(toWeirdCase('abcde'));*/
+/*let toWeirdCase= (s)=>{
+  var str = s.toLowerCase().split(''); // Переводим строку в нижний регистр, и разбиваем на массив. 
+  var j = 0;
+  for(var i = 0; i < str.length; i++){ // проходимся циклом по этим массивам
+      if(str[i] == ' '){
+          j = 0;
+          continue;
+      }
+      else{
+          if (j % 2 == 0){
+              str[i] = str[i].toUpperCase(); // переводим элемент с четным индексом в верхний регистр
+          }
+          j++;
+      }
+  }
+  return str.join('');
+}
+
+console.log(toWeirdCase('abcde'));*/
+/*age > 18 ? location.assign('continue.html') : stop = true; */
+
