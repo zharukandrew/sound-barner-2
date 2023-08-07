@@ -50,7 +50,7 @@ body{
 }
 
 .cards-img {
-    
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -59,18 +59,36 @@ body{
     &__card {
         flex: 0 0 32%;
         margin-bottom: 10px;
-        
+        height: 250px;
         display: flex;
         flex-direction: column;
+        &-top {
+            flex: 0 0 80%;
+        }
+        &-bottom {
+            flex: 0 0 20%;
+        }
         &-top img {
             width: 100%;
         }
     }
 }
+.remove{
+    position: relative;
+    left: 21rem;
+    top: 30px;
+    border:0,5px solid lawngreen;
+}
 .footer{
     display: flex;
     background: black;
     justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left:30px ;
+    margin-right:50px ;
+    width: 1300px;
+    height: 450px;
     
     &__title{
         color: #F8F8F8;
