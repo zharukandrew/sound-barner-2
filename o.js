@@ -1,21 +1,10 @@
-function Person(first,last) {
-    return {
-        first,
-        last
-    }
-   }
-   // Что указывается далее: A, Б или В?
-   const friend1 = new Person("Laurence", "Svekis");
-   console.log( `привет`,friend1.first);
-   console.log(friend1.last);
-  /* function Human(firstName, lastName) {
-    return {
-        firstName,
-        lastName
+let arr = [ 1, 2, 3, 4, 5];
+
+for(let i = 0; i < arr.length; i++){
+    console.log(arr[i])
+    if (arr[i] % 2 === 0) {
+      console.log(arr[i])
     }
 }
-const chris = Human('Chris', 'Coyier')
 
-console.log(chris.firstName) // Chris
-console.log(chris.lastName) // Coyier
-*/
+

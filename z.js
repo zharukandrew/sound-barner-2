@@ -1,25 +1,11 @@
-
-let a = document.querySelector(".input");
-let b = document.querySelector(".inputs");
-let d = document.querySelectorAll('.button');
-
-
-  
-    
-function multiply () {
-  alert(Number(a.value) * Number(b.value))
-}
-function fold () {
-  alert(Number(a.value) + Number(b.value))
-}
-function subtract () {
-  alert(Number(a.value) - Number(b.value))
-}
-function divide () {
-  alert(Number(a.value) / Number(b.value))
-}
-
-    
-  
-
-
+let b = document.querySelector('.page')
+// Добавляет обработчик события «клик» на элемент buttonElement
+let a = document.querySelector('.button')
+a.addEventListener("click",()=>{
+    // classList обращение к классу элемента
+    // add - добавляет указанный класс
+    // remove - удаляет указанный класс
+    // toggle - добавляет класс если его нет и удаляет если он есть
+    b.classList.toggle("red");
+    alert('hhh')
+})
