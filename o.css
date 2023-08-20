@@ -1,0 +1,12 @@
+.error{
+    color:red;
+    font-size: 40px;
+    background: yellow;
+    width: 300px;
+    font-weight: bold;
+    height:150px;
+}
+.yang{
+    width:100px;
+    height:400px;
+}
