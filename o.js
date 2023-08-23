@@ -1,10 +1,10 @@
-let arr = [ 1, 2, 3, 4, 5];
+//API:https://reqres.in/
 
-for(let i = 0; i < arr.length; i++){
-    console.log(arr[i])
-    if (arr[i] % 2 === 0) {
-      console.log(arr[i])
-    }
-}
-
-
+// 1)GET
+fetch('https://reqres.in/api/users')
+  .then (res => res.json())
+  .then(data => console.log(data))
+// /api/users
+// 2)POST
+// 3)PUT
+// 4)DELETE
