@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#elem {
+	position: relative;
+	top: 0;
+	left: 350px;
+	width: 50%;
+	height: 100%;
+	border: 1px solid green;
+    padding: 30px;
+}
+
+.target_blank{
+	color:red;
+}
