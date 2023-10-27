@@ -13,6 +13,6 @@
     padding: 30px;
 }
 
-.target_blank{
-	color:red;
+button{
+	max-width: 200px;
 }
