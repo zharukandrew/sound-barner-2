@@ -1,55 +1,24 @@
-
-
-
-
-/*let organisation = {
-  salary: [1000, 300, 5000, 12677],
-};
-
-function sumSalary(a) {
-  this[a]
+Array.prototype.forEach2 = function (call) {
+    for(let i = 0; i < this.length; i++){
+      call(this[i], i, this)
+    }
 }
 
+let arr = ['Привет']
 
-sumSalary.call() 
-посчитать сумму всех зарплат с помощью sumSalary, при этом sumSalary раб с контекстом (аргумент)
+arr.forEach2((el, ind, arr)=>{console.log(el)})
 
-*/
-/*Задачи на методы массива */
-/*let organisation = {
-  salary: [1000, 300, 5000, 12677],
-};
 
-function sumSalary(a) {
-  return this[a].reduce(function(acc, curr) {
-    return acc + curr;
-  }, 0);
+
+let user2 = {
+  name: 'Dima',
+  age: 25,
+  print () {
+    console.log(this.name)
+  }
 }
 
- console.log(sumSalary.call(organisation, 'salary'));//18977 
- 2 способ
- let organisation = {
-  salary: [1000, 300, 5000, 12677],
-};
-
-function sumSalary(a) {
-  return this[a].reduce((acc , arr) =>
-    acc + arr,0);
+let user = {
+  name: 'Koly',
+  __proto__: user2
 }
-
-
-console.log(sumSalary.call(organisation , 'salary')) 
- 
- */
-
-
-
-
-
-
-
-
-
-
-
-
