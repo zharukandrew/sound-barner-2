@@ -16,7 +16,7 @@
        let a = document.querySelector(".clock")
        setTimeout(() => { console.log(a.innerHTML) }, 1000)
        a.innerHTML = hours + ":" + minutes + ":" + seconds;*/
-       let b = document.querySelector(".button")
+       let b = document.querySelector(".buttons")
        b.addEventListener("click",()=>{
         let date = new Date();
        let hours = date.getHours();
