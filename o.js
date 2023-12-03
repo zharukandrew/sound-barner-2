@@ -1,9 +1,6 @@
 
 
-// При наведении на паразраф мы выделяем его жирным и меняем цвет
-// Напишите программу на JavaScript, чтобы получить ширину и высоту окна (каждый раз, когда размер окна изменяется)
-// Загадай число 
-// Загадки *
+
 let text = document.querySelector(".text");
 let button = document.querySelector(".button");
 let quesNumber = document.querySelector(".ques-number");

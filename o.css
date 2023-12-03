@@ -5,8 +5,24 @@
 }
 
 
-
 .red{
-	color:red;
-	font-weight:bold;
+    color:red;
+    font-weight:bold;
+}
+.main-screen{
+    margin-left: 500px;
+    margin-top: 200px;
+}
+.task{
+    margin-left: 500px;
+    margin-top: 15px;
+}
+.button-numper2{
+    margin: 350px;
+}
+.text{
+    font-size: 20px;
+}
+.task-text2{
+    font-size: 20px;
 }
