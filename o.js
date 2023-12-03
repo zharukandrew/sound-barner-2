@@ -9,8 +9,14 @@ let button = document.querySelector(".button");
 let quesNumber = document.querySelector(".ques-number");
 let text2 = document.querySelector(".text2");
 let buttonNumber = document.querySelector(".button-number");
-let button2 = document.querySelector(".button2");
+let taskText= document.querySelector(".task__text");
+let buttonNumber2 = document.querySelector(".button-number2");
 
+let taskText2 = document.querySelector(".task-text2");
+let answerInput = document.querySelector(".answer-input");
+let submitButton = document.querySelector(".submit-button");
+let resultText = document.querySelector(".result-text");
+let correctAnswersText = document.querySelector(".correct-answers-text");
 text.addEventListener("click",()=>{
   text.classList.toggle("red");
 })
@@ -34,38 +40,56 @@ button.addEventListener("click", () => {
   text2.value = ""; // Clear the input field
 });
 
-button2.addEventListener("click", () => {
-  const riddles = {
-  'Тетрадка':'То я в клетку,то в линейку написать на мне сумейка ,что такое я?', 
-  'Елка':'Зимой и летом, одним цветом?', 
-  'Снеговик':'Сделан из снега на лице морковка?',
-}
+const riddles = {
+  'Тетрадка': 'То я в клетку, то в линейку написать на мне сумейка, что такое я?',
+  'Елка': 'Зимой и летом, одним цветом?',
+  'Снеговик': 'Сделан из снега, на лице морковка?'
+};
+const arrRiddles = Object.entries(riddles);
+let currentRiddleIndex = 0;
+let correctAnswers = {};
 
-  const arrRiddles = Object.values(riddles)
-  const answers = Object.keys(riddles)
+let buttonumber2 = document.createElement("button");
+buttonumber2.textContent = "Показать загадки";
+buttonumber2.classList.add("button-number2");
+buttonumber2.addEventListener("click", () => {
+  currentRiddleIndex = 0;
+  taskText2.innerHTML = arrRiddles[currentRiddleIndex][1];
+  correctAnswersText.innerHTML = "";
+});
+document.body.appendChild(buttonumber2);
 
-  const info = {
-    correct: 0,
-    notСorrect: 0,
-    riddlesAll: arrRiddles.length
-  }
+let button2 = document.createElement("button");
+button2.textContent = "Ответ";
+button2.addEventListener("click", displayNextRiddle);
+document.body.appendChild(button2);
 
-  for(let i = 0; i < arrRiddles.length; i++) {
-    let answer = prompt(arrRiddles[i])
-
-    if (answer.toLowerCase() === answers[i].toLowerCase()) {
-       info.correct++
+function displayNextRiddle() {
+  if (currentRiddleIndex < arrRiddles.length) {
+    let answer = answerInput.value.toLowerCase().trim();
+    let currentRiddle = arrRiddles[currentRiddleIndex][0];
+    if (answer === currentRiddle.toLowerCase() || answer === riddles[currentRiddle].toLowerCase()) {
+      resultText.innerHTML = "Правильный ответ!";
+      correctAnswers[currentRiddle] = "Правильно";
     } else {
-       info.notСorrect++
+      resultText.innerHTML = "Неправильный ответ!";
+      correctAnswers[currentRiddle] = "Неправильно";
+    }
+    currentRiddleIndex++;
+    if (currentRiddleIndex < arrRiddles.length) {
+      taskText2.innerHTML = arrRiddles[currentRiddleIndex][1];
+      answerInput.value = "";
+    } else {
+      taskText2.innerHTML = "Вы ответили на все вопросы.";
+      answerInput.value = "";
+      resultText.innerHTML = "";
+      let correctAnswersString = Object.entries(correctAnswers)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join("<br>");
+      correctAnswersText.innerHTML = `Результаты:<br>${correctAnswersString}`;
     }
   }
-
-  alert(`Правильных ответов: ${info.correct} 
-         Не правильных: ${info.notСorrect}
-         Всего загадок: ${info.riddlesAll}`)
-
-})
-
+}
 /*window.addEventListener('resize', ()=>{
   console.log(window.innerWidth, window.innerHeight)
 })*/
