@@ -1,56 +1,111 @@
-const arr = ["Камень", "Ножницы", "Бумага"];
-const startButton = document.querySelector('.game3-button1');
-const computerAnswer = document.querySelector('.game3-page');
-const buttons = document.querySelectorAll('.button');
-let resultText = document.querySelector('.page');
+// const arr = ["Камень", "Ножницы", "Бумага"];
+// const startButton = document.querySelector('.game3-button1');
+// const computerAnswer = document.querySelector('.game3-page');
+// const buttons = document.querySelectorAll('.button');
+// let resultText = document.querySelector('.page');
 
-class Games {
-  constructor(mapEventov) {
-    this.mapEventov = mapEventov;
+
+
+//  class Games {
+//   constructor(mapEventov) {
+//     this.mapEventov = mapEventov;
+//   }
+//   play() {
+//     console.log(this.mapEventov);
+//   }
+// }
+
+
+// let games = new Games({
+//   'Ножницы': {
+//     'Бумага': 0,
+//     'Камень': 1,
+//     'Ножницы': 2
+//   },
+//   'Бумага': {
+//     'Бумага': 2,
+//     'Камень': 1,
+//     'Ножницы': 0
+//   },
+//   'Камень': {
+//     'Бумага': 0,
+//     'Камень': 2,
+//     'Ножницы': 1
+//   }
+// });
+
+// games.play();
+
+// startButton.addEventListener('click', () => {
+//   computerAnswer.innerHTML = "Компьютер готов к игре!";
+// });
+
+// buttons.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     const userChoice = e.target.innerHTML;
+//     const computerChoice = arr[Math.floor(Math.random() * arr.length)];
+//     resultText.innerHTML = `Вы выбрали: ${userChoice} <br>
+//                 Компьютер выбрал: ${computerChoice} <br>`
+//     if (games.mapEventov[userChoice][computerChoice] === 1) {
+//       resultText.innerHTML += 'Вы выиграли!';
+//     } else if (games.mapEventov[userChoice][computerChoice] === 2) {
+//       resultText.innerHTML += 'Ничья!';
+//     } else if (games.mapEventov[userChoice][computerChoice] === 0) {
+//       resultText.innerHTML += 'Вы проиграли!';
+//     } else {
+//       resultText.innerHTML += 'Что-то пошло не так!';
+//     }
+//   });
+// });
+
+
+
+
+
+
+// class GameRandom {
+//  random = Math.floor(Math.random() * 10);
+//  answer= null;
+ 
+//  Game(){
+//   alert('Угадай число от 1 до 10')
+//   this.answer = prompt('Введите число');
+//   while(Number(this.answer) !== this.random) {
+//      this.answer = prompt('Попробуй еще раз')
+//    }
+//    alert('Молодец!')
+//  }
+// }
+
+// let game = new GameRandom();
+// game.Game()
+
+
+
+
+
+class Animal{
+  constructor(name){
+    this.name = name;
   }
-  play() {
-    console.log(this.mapEventov);
+  speak(){
+    console.log(`${this.name}`)
   }
 }
-
-let games = new Games({
-  'Ножницы': {
-    'Бумага': 0,
-    'Камень': 1,
-    'Ножницы': 2
-  },
-  'Бумага': {
-    'Бумага': 2,
-    'Камень': 1,
-    'Ножницы': 0
-  },
-  'Камень': {
-    'Бумага': 0,
-    'Камень': 2,
-    'Ножницы': 1
+class Dog extends Animal{
+  speak(){
+    console.log(`${this.name}`)
   }
-});
-
-games.play();
-
-startButton.addEventListener('click', () => {
-  computerAnswer.innerHTML = "Компьютер готов к игре!";
-});
-
-buttons.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    const userChoice = e.target.innerHTML;
-    const computerChoice = arr[Math.floor(Math.random() * arr.length)];
-    resultText.innerHTML = `Вы выбрали: ${userChoice} <br>
-                Компьютер выбрал: ${computerChoice} <br>`
-    if (games.mapEventov[userChoice][computerChoice] === 1) {
-      resultText.innerHTML += 'Вы выиграли!';
-    } else if (games.mapEventov[userChoice][computerChoice] === 2) {
-      resultText.innerHTML += 'Ничья!';
-    } else if (games.mapEventov[userChoice][computerChoice] === 0) {
-      resultText.innerHTML += 'Вы проиграли!';
-    } else {
-      resultText.innerHTML += 'Что-то пошло не так!';
-    }
-  });
-});
+}
+class Cat extends Animal{
+  speak(){
+    console.log(`${this.name}`)
+  }
+}
+let dog = new Dog('Петя');
+let cat = new Cat('Max');
+function funcAnimal(animal){
+  animal.speak()
+}
+funcAnimal(dog);
+funcAnimal(cat);

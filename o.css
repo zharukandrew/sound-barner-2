@@ -2,8 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+body{
+    background-color:#7334ea ;
 }
 
+.conteiner{
+    width: 1500px;
+}
+.section {
+    display: flex;
+    
+  }
 
 .red{
     color:red;
@@ -12,10 +23,19 @@
 .main-screen{
     margin-left: 500px;
     margin-top: 200px;
+    background-color: aqua;
+    border-radius: 18px;
+    width: 350px;
+
 }
 .task{
+   
     margin-left: 500px;
     margin-top: 15px;
+    background-color:green;
+    border-radius: 18px;
+    height:150px;
+    width: 350px;
 }
 .button-numper2{
     margin: 350px;
@@ -25,4 +45,38 @@
 }
 .task-text2{
     font-size: 20px;
+}
+.button{
+    font-size: 10px;
+    background-color: #bcec30;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    width: 30%;
+    
+}
+
+.button-number{
+    background-color: #bcec30;
+    border: none;
+    border-radius: 18px;
+    
+    
+}
+.result-text{
+    padding-left: 50px;
+}
+.button-number2{
+    font-size: 7px;
+    background-color: #bcec30;
+    border: none;
+    border-radius: 18px;
+   
+}
+.task button {
+    font-size: 10px;
+    background-color: #bcec30;
+    border: none;
+    border-radius: 18px;
+    margin-left: 10px;
 }
